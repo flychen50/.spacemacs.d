@@ -248,7 +248,6 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   )
-
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
@@ -260,9 +259,27 @@ you should place your code here."
         '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
           ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-  (global-set-key (kbd "M-i") 'helm-swoop)
-  ;;(global-set-key (kbd "C-c SPC") 'avy-goto-char)
+;;  (global-set-key (kbd "M-i") 'helm-swoop)
+  (global-set-key (kbd "C-c SPC") 'avy-goto-char)
   (global-set-key (kbd "C-c v") 'find-function)
+
+  ;; helm-swoop
+  (use-package helm-swoop
+    :bind (("M-i" . helm-swoop)
+           ("M-I" . helm-swoop-back-to-last-point)
+           ("C-c M-i" . helm-multi-swoop)
+           ("C-x M-i" . helm-multi-swoop-all))
+    :config
+    (progn
+      (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+      (define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
+      (setq helm-multi-swoop-edit-save t)
+      (setq helm-swoop-split-with-multiple-windows nil)
+      (setq helm-swoop-split-direction 'split-window-vertically)
+      (setq helm-swoop-speed-or-color nil)))
+
+
+
   ;;(spacemacs/set-leader-keys "M-i" 'helm-swoop)
   )
 
