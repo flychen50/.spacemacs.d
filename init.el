@@ -262,7 +262,9 @@ you should place your code here."
 ;;  (global-set-key (kbd "M-i") 'helm-swoop)
   (global-set-key (kbd "C-c SPC") 'avy-goto-char)
   (global-set-key (kbd "C-c v") 'find-function)
-
+  (global-set-key (kbd "C-c s") 'spacemacs/helm-file-do-grep)
+  (global-set-key (kbd "C-c d") 'helm-projectile-grep)
+  (global-set-key (kbd "C-c f") 'spacemacs/helm-project-do-ag-region-or-symbol)
   ;; helm-swoop
   (use-package helm-swoop
     :bind (("M-i" . helm-swoop)
