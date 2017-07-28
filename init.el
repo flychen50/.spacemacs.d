@@ -28,7 +28,9 @@ values."
      auto-completion
      ;; better-defaults
      emacs-lisp
-     c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      python
      git
      markdown
@@ -53,11 +55,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-<<<<<<< HEAD
-   dotspacemacs-additional-packages '(bing-dict youdao-dictionary protobuf-mode gist elpy google-c-style)
-=======
    dotspacemacs-additional-packages '(bing-dict youdao-dictionary protobuf-mode gist elpy )
->>>>>>> b209249ab2dcec6075bde91f82e76fa00e0b3910
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
