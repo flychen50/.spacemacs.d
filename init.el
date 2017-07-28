@@ -45,12 +45,13 @@ values."
      ;;spell-checking
      ;;syntax-checking
      version-control
+     bytedance
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(bing-dict youdao-dictionary protobuf-mode gist elpy)
+   dotspacemacs-additional-packages '(bing-dict youdao-dictionary protobuf-mode gist elpy google-c-style)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -255,6 +256,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
           ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
   )
+
+
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
