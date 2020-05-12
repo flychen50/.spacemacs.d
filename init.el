@@ -32,34 +32,19 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     csv
-     javascript
-     html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
      emacs-lisp
      c-c++
      python
-     git
-     markdown
-     (org :variables org-enable-github-support t)
-     cscope
-     semantic
-     smex
-     gtags
-     dash
-     imenu-list
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;;spell-checking
      ;;syntax-checking
-     version-control
-     bytedance
      ;;osx
      ;;confluence
      )
